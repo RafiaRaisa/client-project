@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interview Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary">
+          <div class="container-fluid">
+             
+            <button class="navbar-toggler icons" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto mb-4 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" aria-current="page" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">Contact us</a>
+                </li>
+              
+                
+              </ul>
+         
+            </div>
+          </div>
+        </nav>
+        </nav>
+
+  </header>
+
+        <div class="buttons m-auto">
+          <button class=" btn active text-dark bg-light p-1 me-4 fs-4" onclick="fontchange(14)">A</button>
+          <button class=" btn active text-dark bg-light p-1 me-3 fs-3" onclick="fontchange(18)">A</button>
+          <button class=" btnactive text-dark bg-light p-1 me-2 fs-2" onclick="fontchange(20)">A</button>
+        </div>
+        <div class="container">
+          <div class="content" id="text">
+              <h4>Junior Frontened Developer</h4>
+              <p id="para">
+                  Junior Front End Developers are brand new to working as coders, so a lot of the daily work revolves around small tasks that teach best-practices. The point of the work is not necessarily to do it as fast as possible, but to build a foundation.Usually the first task at a new company for a Junior Front End Developer is to execute a small tweak in the user interface (UI) of the product. The fix may be as simple as changing some CSS code, but the purpose of it is to help the new developer get comfortable with the pipeline.
+      
+      
+              </p>
+          </div>
+      </div>
+          <style>
+            .icons{
+                background-color: #fff;
+            }
+            .nav-link{
+                font-size: 20px;
+            }
+            .navbar ul li a{
+                position: relative;
+                margin-right:50px;
+                align-content: center;
+            }
+            .navbar ul li a::before{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 5px;
+                left: 0;
+                bottom: 0;
+                background-color: rgb(224,204,204);
+                transform-origin: left;
+                transition: transform 1s linear;
+                transform: scaleX(0);
+            }
+            .navbar ul li a:hover:before{
+                transform: scaleX(1);
+                transform-origin:right ;
+            }
+            .container{
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 1200px;
+              flex-direction:column;
+              margin: 20px auto;
+              padding: 0 20px;
+              font-size: 14px;
+            }
+            .container.content{
+              font-size: 14px;
+            }
+           .buttons{
+              width: 100%;
+              display: flex;
+              justify-content: flex-end;
+              align-items: flex-end;
+              margin-bottom: 20px;
+            }
+            .buttons .btn.active{
+              background-color: #444;
+            
+            }
+            .buttons .btn:nth-child(2){
+              font-size: 18px;
+            }
+            .buttons .btn:nth-child(3){
+              font-size: 20px;
+            }
+            .container .content{
+              font-size: 1em;
+              color: #444;
+            }
+            .container .content h2,
+            .container .content p{
+  transition: 0.5s;
+            }
+            @media (max-width: 991.98px) {
+                .navbar ul{
+              margin-right: 100px;
+                }
+             }
+  
+          </style>
+          <script>
+  function fontchange(n){
+  var paragraph=document.getElementById('para');
+  paragraph.style.fontSize = n + "px";
+  }
+  
+  let buttons=document.querySelector('.buttons');
+  let btn=buttons.querySelectorAll('.btn');
+  for(var i=0;i<btn.length;i++){
+    btn[i].addEventListener('click',function(){
+      let current =document.getElementsByClassName('active');
+      current[0].className=current[0].className.replace("active","");
+      this.className +=" active";
+    })
+  }
+  
+          </script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        </body>
+      </html> 
